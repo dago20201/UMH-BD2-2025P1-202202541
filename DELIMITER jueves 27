@@ -31,10 +31,9 @@ BEGIN
 END //
 
 DELIMITER ;
-CALL sp_new_currency_case(
-    "YEN",
-    "¥", 
-    0, 
-    "JAPON",
-    "JPY"
+DELIMITER ;
+CALL db_demo.sp_new_currency_case(
+    "sol peruano", "s.", 0, "PERU" , "PEN"
 );
+select * from db_demo.currencies WHERE currency_name LIKE '%euro%"
+
